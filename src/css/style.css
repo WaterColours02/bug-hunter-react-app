@@ -1,0 +1,410 @@
+/* 
+
+01 -- TYPOGRAPHY SYSTEM 
+
+- FONT SIZE SYSTEM (px) 
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- FONT WEIGHTS
+Default: 400
+medium: 500
+semi-bold: 600
+bold: 700
+
+- FONT LINE HEIGHTS 
+Default: 1  
+small 1.06  
+Paragraph default 1.6
+
+- LETTER SPACING 
+-0.5px
+0.75px
+
+- SPACING SYSTEM (px)  
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+02 -- COLORS 
+- Primary: 
+- Tints: 
+
+
+- Shades:
+- Accents: 
+- Greys: #555 #333 #6f6f6f
+
+05 -- SHADOWS
+
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, .1);
+
+06 -- BORDER RADIUS 
+default: 9px 
+
+07 -- WHITE SPACES
+
+*/
+
+/* ROOT VARIABLES */
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+/* GERNAL STYLING */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/2317711/pexels-photo-2317711.jpeg?cs=srgb&dl=pexels-anni-roenkae-2317711.jpg&fm=jpg");
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 60%;
+  transition: 0.4s;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  padding: 0.3rem;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  margin: 9.6rem auto;
+}
+
+input:focus,
+select:focus {
+  outline: none !important;
+}
+
+form button {
+  background-color: rgb(48, 48, 48);
+  color: rgb(245, 245, 245);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: rem;
+  padding: 2.2rem;
+  border-radius: 0.5rem;
+}
+
+/* -------------------- */
+/* -- SIGN IN STYLES -- */
+/* -------------------- */
+
+.sign-in-wrapper {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.sign-in {
+  display: grid;
+  gap: 1.8rem;
+  background: rgb(255, 255, 255);
+  width: 60rem;
+  margin: 5.6rem auto;
+  padding: 4.2rem;
+  border-radius: 1.2rem;
+}
+
+/* ---------------- */
+/* NEW ISSUE PAGE   */
+/* HEADER STYLES    */
+/* ---------------- */
+
+.welcome-user {
+  text-align: center;
+  font-size: 4.4rem;
+  font-weight: 700;
+  font-stretch: expanded;
+  color: #343a40;
+  background: #ffffff;
+  padding: 1.8rem 2.2rem;
+  margin: 1.2rem auto;
+  border-radius: 1.2rem;
+}
+
+/* ---------------------- */
+/* NEW ISSUE FORM STYLES  */
+/* ---------------------- */
+
+.issue-form-title {
+  color: #343a40;
+  font-size: 2.2rem;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+}
+
+.form-label {
+  color: #343a40;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+form select {
+  text-align: center;
+  text-align-last: center;
+  /* webkit*/
+}
+
+form option {
+  color: #343a40;
+  text-align: left;
+  padding: 1.2rem 9.6rem;
+  /* reset to left*/
+}
+
+input::placeholder {
+  text-align: center;
+  line-height: 5.6rem;
+  font-size: 1.2rem;
+  color: #343a40;
+}
+
+form textarea,
+input,
+select {
+  color: #343a40;
+  background-color: #e9ecef;
+  border-radius: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  resize: none;
+  border: none;
+}
+
+.input-wrapper-desc {
+  margin-top: 18px;
+}
+
+.modal-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: Alpha(Opacity=50) !important;
+  background-color: rgb(47, 47, 47);
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-issue-form {
+  opacity: 1 !important;
+  background-color: #ffffff !important;
+  z-index: 1000;
+}
+
+.edit-issue-form,
+.new-issue-form {
+  min-width: 50rem;
+  max-width: 70rem;
+  max-height: 96rem;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  gap: 0.2rem;
+  list-style-type: none;
+  margin-bottom: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.edit-issue-form-title {
+  text-align: center;
+  color: #202122;
+  font-size: 2.2rem;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Util classes for edit function */
+/* .close {
+  display: hidden;
+}
+
+.open {
+  display: block;
+} */
+
+.input-wrapper {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.assigned-to-input {
+  margin-bottom: 0.8rem;
+}
+
+.desc-text-area {
+  padding: 1rem 2rem;
+}
+
+.expected-complete-date-text-area {
+  padding: 0.6rem;
+}
+
+.new-issue-submit-button {
+  justify-self: center;
+  padding: 2.2rem 16rem;
+  margin: 1.2rem auto;
+  letter-spacing: 0.4rem;
+}
+
+/* ------------- */
+/* SEARCH   BAR  */
+/* ------------- */
+
+.search-bar-container {
+  /* margin: 1.2rem; */
+  padding: 1.2rem;
+  background-color: white;
+  border-radius: 0.6rem;
+
+  height: 7.2rem;
+
+  display: grid;
+}
+
+.search-bar {
+  background-color: #e9ecef;
+  font-size: 1.8rem;
+}
+
+.search-bar::placeholder {
+  font-size: 1.8rem;
+}
+
+/* ------------- */
+/* Issue styles */
+/* ------------- */
+
+.issue-desc {
+  font-size: 2.4rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-left: 1.2rem;
+  text-transform: capitalize;
+}
+
+.list-issue {
+  margin-bottom: 10px;
+  max-height: 48rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.6rem;
+}
+
+.status-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.issue-status {
+  font-weight: 400;
+}
+
+.issue-completed {
+  text-align: center;
+  width: 93%;
+
+  font-size: 2.2rem;
+  font-weight: 600;
+  justify-self: center;
+  padding: 2.2rem 20rem;
+  margin: 1.2rem auto;
+  letter-spacing: 0.4rem;
+
+  background-color: #3a9479 !important;
+  color: #e9ecef !important;
+  border-radius: 0.6rem;
+}
+
+.issue-active {
+  text-align: center;
+  width: 93%;
+
+  font-size: 2.2rem;
+  font-weight: 600;
+  justify-self: center;
+  padding: 2.2rem 20rem;
+  margin: 1.2rem auto;
+  letter-spacing: 0.4rem;
+
+  background-color: #f8883d !important;
+  color: #e9ecef !important;
+  border-radius: 0.6rem;
+}
+
+.issue-line-div p {
+  color: #343a40;
+}
+
+.date-created {
+  color: #696969;
+  font-weight: 400;
+}
+
+.issue-line-div {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  margin-left: 1.2rem;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.buttons-wrapper {
+  display: flex;
+  padding: 1.2rem 2.3rem;
+  justify-content: space-evenly;
+  gap: 2.2rem;
+}
+
+.buttons-wrapper button {
+  /* background-color: rgb(48, 48, 48); */
+  color: rgb(245, 245, 245);
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  flex-grow: 2;
+  padding: 1.2rem 6rem;
+  border-radius: 0.6rem;
+  border-style: none;
+}
+
+.edit-issue {
+  background-color: #f8883d;
+}
+
+.complete-issue {
+  background-color: #48b997;
+}
+
+.delete-issue {
+  background-color: #e76262;
+}
