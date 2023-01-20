@@ -23,7 +23,6 @@ Paragraph default 1.6
 - SPACING SYSTEM (px)  
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-
 02 -- COLORS 
 - Primary: 
 - Tints: 
@@ -52,7 +51,7 @@ default: 9px
   box-sizing: border-box;
 }
 
-/* GERNAL STYLING */
+/* /* GERNERAL STYLING * */
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -148,9 +147,10 @@ form button {
 
 .issue-form-title {
   color: #343a40;
-  font-size: 2.2rem;
-  margin-top: 1.2rem;
-  margin-left: 1.2rem;
+  font-size: 2.8rem;
+  margin-top: 1.8rem;
+  margin-left: 0.8rem;
+  margin-bottom: 2.2rem;
 }
 
 .form-label {
@@ -270,7 +270,7 @@ select {
 
 .new-issue-submit-button {
   justify-self: center;
-  padding: 2.2rem 16rem;
+  padding: 2.2rem 17.5rem;
   margin: 1.2rem auto;
   letter-spacing: 0.4rem;
 }
@@ -293,6 +293,8 @@ select {
 .search-bar {
   background-color: #e9ecef;
   font-size: 1.8rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
 }
 
 .search-bar::placeholder {
@@ -305,8 +307,8 @@ select {
 
 .issue-desc {
   font-size: 2.4rem;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1.4rem 1rem;
+  margin-top: 2.4rem;
   margin-left: 1.2rem;
   text-transform: capitalize;
 }
@@ -361,6 +363,7 @@ select {
 
 .issue-line-div p {
   color: #343a40;
+  font-size: 1.2rem;
 }
 
 .date-created {
