@@ -17,7 +17,7 @@ class Issue extends React.Component {
       expectedCompleteDate,
     } = this.props.details;
 
-    const editOpen = this.props.editOpen;
+    // const editOpen = this.props.editOpen;
 
     return (
       <div className='issue-wrapper'>

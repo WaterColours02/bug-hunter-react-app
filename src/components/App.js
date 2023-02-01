@@ -74,7 +74,6 @@ class App extends React.Component {
     const issues = { ...this.state.issues };
     issues[key] = null;
     this.setState({ issues });
-    console.log("issue deleted");
   };
 
   completeIssue = (key) => {
@@ -110,12 +109,20 @@ class App extends React.Component {
             />
           </div>
           <div className='issues-list'>
-            {Object.keys(this.state.filteredIssues).map((key) => (
+            {Object.keys(
+              this.state.searchString
+                ? this.state.filteredIssues
+                : this.state.issues
+            ).map((key) => (
               <Issue
                 editOpen={this.state.editOpen}
                 key={key}
                 index={key}
-                details={this.state.issues[key]}
+                details={
+                  this.state.searchString
+                    ? this.state.filteredIssues[key]
+                    : this.state.issues[key]
+                }
                 deleteIssue={this.deleteIssue}
                 completeIssue={this.completeIssue}
                 updateIssue={this.updateIssue}
