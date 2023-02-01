@@ -3,9 +3,9 @@
 This is a basic CRUD app built with REACT and Javascript. I'm using it as a portfolio project to demonstrate my knowledge of react and javascript. 
 
 To spin up the application clone the repository. 
-Once the repository is cloned, open you console / terminal and navigate to the "bug-hunter-react-app" directory 
+Once the repository is cloned, open your console / terminal and navigate to the "bug-hunter-react-app" directory 
 
-run these commands 
+Run these commands:
 
 "npm install" 
 "npm start" 
