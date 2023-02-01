@@ -30,45 +30,6 @@ class App extends React.Component {
     });
   }
 
-  // ------------------------------------------------------------
-
-  //methods
-  addIssue = (issue) => {
-    console.log("adding an issue");
-    // 1. take a copy of state
-    const issues = { ...this.state.issues };
-    // 2. add the new issue to the copy of state
-    issues[`issue${Date.now()}`] = issue;
-    // 3. update the state object
-    this.setState({ issues });
-  };
-
-  updateIssue = (key, issue) => {
-    const userId = { ...this.props.match.params.userId }; // create a deep copy of the HUNTER object
-    const issues = { ...userId.issues }; // create a deep copy of the issues object
-    issues[key] = issue;
-    this.setState({
-      userId: {
-        ...userId,
-        issues,
-      },
-    });
-  };
-
-  deleteIssue = (key) => {
-    const issues = { ...this.state.issues };
-    issues[key] = null;
-    this.setState({ issues });
-  };
-
-  completeIssue = (key) => {
-    const issues = { ...this.state.issues };
-    issues[key].status = "completed";
-    this.setState({ issues });
-  };
-
-  //  this needs to be completed
-
   filterIssues = () => {
     if (!this.state.searchString) {
       this.setState({ filteredIssues: { ...this.state.issues } });
@@ -89,6 +50,40 @@ class App extends React.Component {
       this.setState({ filteredIssues });
     }
   };
+
+  // ------------------------------------------------------------
+
+  //methods
+  addIssue = (issue) => {
+    console.log("adding an issue");
+    // 1. take a copy of state
+    const issues = { ...this.state.issues };
+    // 2. add the new issue to the copy of state
+    issues[`issue${Date.now()}`] = issue;
+    // 3. update the state object
+    this.setState({ issues }, this.filterIssues());
+  };
+
+  updateIssue = (key, issue) => {
+    const issues = { ...this.state.issues };
+    issues[key] = { ...issue };
+    this.setState({ issues });
+  };
+
+  deleteIssue = (key) => {
+    const issues = { ...this.state.issues };
+    issues[key] = null;
+    this.setState({ issues });
+    console.log("issue deleted");
+  };
+
+  completeIssue = (key) => {
+    const issues = { ...this.state.issues };
+    issues[key].status = "completed";
+    this.setState({ issues });
+  };
+
+  //  this needs to be completed
 
   onSearchChange = (event) => {
     const searchString = event.target.value.toLocaleLowerCase();

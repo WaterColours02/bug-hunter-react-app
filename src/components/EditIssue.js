@@ -1,20 +1,11 @@
 import React from "react";
 
 class EditIssue extends React.Component {
-  descRef = React.createRef();
-  natureRef = React.createRef();
-  severityRef = React.createRef();
-  priorityRef = React.createRef();
-  assignedToRef = React.createRef();
-  dateCreatedRef = React.createRef();
-  expectedCompletedDateRef = React.createRef();
-  status = React.createRef();
-
   constructor(props) {
     super(props);
     this.state = {
       editOpen: false,
-      ...this.props.details, // Spread the details object into the state
+      issue: { ...this.props.details }, // Spread the details object into the state
     };
     this.toggleEditModal = this.toggleEditModal.bind(this);
   }
@@ -31,14 +22,15 @@ class EditIssue extends React.Component {
     const key = this.props.index;
 
     const issue = {
-      desc: this.state.descRef,
-      nature: this.state.natureRef,
-      severity: this.state.severityRef,
-      priority: this.state.priorityRef,
-      assignedTo: this.state.assignedToRef,
-      expectedCompleteDate: this.state.expectedCompletedDateRef,
-      status: this.state.status,
+      desc: this.state.issue.desc,
+      nature: this.state.issue.nature,
+      severity: this.state.issue.severity,
+      priority: this.state.issue.priority,
+      assignedTo: this.state.issue.assignedTo,
+      expectedCompleteDate: this.state.issue.expectedCompletedDate,
+      status: this.state.issue.status,
     };
+
     this.props.updateIssue(key, issue);
 
     // refresh the form
@@ -53,22 +45,12 @@ class EditIssue extends React.Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({
-      [name]: value,
-    });
+    const issue = { ...this.state.issue };
+    issue[name] = value;
+    this.setState({ issue });
   };
 
   render() {
-    const {
-      desc,
-      nature,
-      severity,
-      priority,
-      assignedTo,
-      status,
-      expectedCompleteDate,
-    } = this.props.details;
-
     return (
       <div>
         <button
@@ -82,7 +64,7 @@ class EditIssue extends React.Component {
           <div className='edit-issue-form'>
             <div
               className='modal-overlay'
-              onClick={this.toggleEditModal}
+              // onClick={this.toggleEditModal}
             >
               <form
                 onSubmit={this.handleUpdateSubmit}
@@ -99,7 +81,7 @@ class EditIssue extends React.Component {
                   <input
                     className='desc-text-area'
                     name='desc'
-                    value={this.state.desc}
+                    value={this.state.issue.desc}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -113,7 +95,7 @@ class EditIssue extends React.Component {
                   </label>
                   <select
                     name='status'
-                    value={this.state.status}
+                    value={this.state.issue.status}
                     onChange={this.handleChange}
                   >
                     <option value='active'>Active</option>
@@ -130,7 +112,7 @@ class EditIssue extends React.Component {
                   </label>
                   <select
                     name='nature'
-                    value={this.state.nature}
+                    value={this.state.issue.nature}
                     onChange={this.handleChange}
                   >
                     <option value='security'>Security</option>
@@ -150,7 +132,7 @@ class EditIssue extends React.Component {
                   <select
                     name='severity'
                     type='text'
-                    value={this.state.severity}
+                    value={this.state.issue.severity}
                     onChange={this.handleChange}
                   >
                     <option value='low'>Low</option>
@@ -169,7 +151,7 @@ class EditIssue extends React.Component {
                   <select
                     name='priority'
                     type='text'
-                    value={this.state.priority}
+                    value={this.state.issue.priority}
                     onChange={this.handleChange}
                   >
                     <option value='low'>Low</option>
@@ -188,7 +170,7 @@ class EditIssue extends React.Component {
                   <input
                     className='expected-complete-date-text-area'
                     name='expectedCompleteDate'
-                    value={this.state.expectedCompleteDate}
+                    value={this.state.issue.expectedCompleteDate}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -204,7 +186,7 @@ class EditIssue extends React.Component {
                     className='assigned-to-input'
                     name='assignedTo'
                     type='text'
-                    value={this.state.assignedTo}
+                    value={this.state.issue.assignedTo}
                     onChange={this.handleChange}
                   />
                 </div>
