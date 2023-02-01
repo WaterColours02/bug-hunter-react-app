@@ -3,14 +3,17 @@
 This is a basic CRUD app built with REACT and Javascript. I'm using it as a portfolio project to demonstrate my knowledge of react and javascript. 
 
 To spin up the application clone the repository. 
-Once the repository is cloned, open your console / terminal and navigate to the "bug-hunter-react-app" directory 
+Once the repository is cloned, open your console you will need to add the .env file to the root. 
+I will send that to you on request. I'm using the .env to kepe my firebase API key off of github. 
 
-Run these commands:
+once you ahve added the .env file to the root. 
+
+open terminal and navigate tot he root and run the commands below. 
 
 "npm install" 
 "npm start" 
 
-and the application should open. 
+application should open through localhost:/3000
 
 
 At the momment the app has some a bug when using the "edit issue" function. 
