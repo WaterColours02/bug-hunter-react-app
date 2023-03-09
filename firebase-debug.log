@@ -1,0 +1,21 @@
+[debug] [2023-02-13T04:30:36.873Z] ----------------------------------------------------------------------
+[debug] [2023-02-13T04:30:36.876Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hunte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-02-13T04:30:36.877Z] CLI Version:   11.22.0
+[debug] [2023-02-13T04:30:36.877Z] Platform:      win32
+[debug] [2023-02-13T04:30:36.877Z] Node Version:  v16.15.0
+[debug] [2023-02-13T04:30:36.878Z] Time:          Sun Feb 12 2023 20:30:36 GMT-0800 (Pacific Standard Time)
+[debug] [2023-02-13T04:30:36.878Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-13T04:30:36.889Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-13T04:30:36.890Z] > authorizing via signed-in user (huntercheveldave@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\hunte\OneDrive\Desktop\REACT DEBUGGER GITHUB CLONE\bug-hunter-react-app
+

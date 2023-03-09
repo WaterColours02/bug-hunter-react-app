@@ -22,14 +22,30 @@ class EditIssue extends React.Component {
     const key = this.props.index;
 
     const issue = {
-      desc: this.state.issue.desc,
-      nature: this.state.issue.nature,
-      severity: this.state.issue.severity,
-      priority: this.state.issue.priority,
-      assignedTo: this.state.issue.assignedTo,
-      expectedCompleteDate: this.state.issue.expectedCompletedDate,
-      status: this.state.issue.status,
+      desc: "",
+      nature: "",
+      severity: "",
+      priority: "",
+      assignedTo: "",
+      expectedCompleteDate: "",
+      status: "",
+
+      // desc: this.state.issue.desc,
+      // nature: this.state.issue.nature,
+      // severity: this.state.issue.severity,
+      // priority: this.state.issue.priority,
+      // assignedTo: this.state.issue.assignedTo,
+      // expectedCompleteDate: this.state.issue.expectedCompletedDate,
+      // status: this.state.issue.status,
     };
+
+    issue.desc = this.state.issue.desc;
+    issue.nature = this.state.issue.nature;
+    issue.severity = this.state.issue.severity;
+    issue.priority = this.state.issue.priority;
+    issue.assignedTo = this.state.issue.assignedTo;
+    issue.expectedCompleteDate = this.state.issue.expectedCompleteDate;
+    issue.status = this.state.issue.status;
 
     this.props.updateIssue(key, issue);
 

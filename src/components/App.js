@@ -4,7 +4,6 @@ import Issue from "./Issue.js";
 import base from "../base";
 
 class App extends React.Component {
-  //state
   state = {
     issues: {},
     editOpen: false,
@@ -12,7 +11,7 @@ class App extends React.Component {
     filteredIssues: {},
   };
 
-  // life-cycle
+  // life-cycle //
   // -----------------------------------------------------
   // THIS IS HOW YOU LOAD DATA FROM FIREBASE TO STATE
   // -----------------------------------------------------
@@ -66,15 +65,18 @@ class App extends React.Component {
 
   updateIssue = (key, issue) => {
     const issues = { ...this.state.issues };
+    const searchString = undefined;
     issues[key] = { ...issue };
     this.setState({ issues });
+    this.setState({ searchString });
   };
 
   deleteIssue = (key) => {
     const issues = { ...this.state.issues };
+    const searchString = undefined;
     issues[key] = null;
     this.setState({ issues });
-    console.log("issue deleted");
+    this.setState({ searchString });
   };
 
   completeIssue = (key) => {
@@ -82,8 +84,6 @@ class App extends React.Component {
     issues[key].status = "completed";
     this.setState({ issues });
   };
-
-  //  this needs to be completed
 
   onSearchChange = (event) => {
     const searchString = event.target.value.toLocaleLowerCase();
@@ -107,15 +107,24 @@ class App extends React.Component {
               type='text'
               placeholder='Search Issues...'
               onChange={this.onSearchChange}
+              value={this.state.searchString}
             />
           </div>
           <div className='issues-list'>
-            {Object.keys(this.state.filteredIssues).map((key) => (
+            {Object.keys(
+              this.state.searchString
+                ? this.state.filteredIssues
+                : this.state.issues
+            ).map((key) => (
               <Issue
                 editOpen={this.state.editOpen}
                 key={key}
                 index={key}
-                details={this.state.issues[key]}
+                details={
+                  this.state.searchString
+                    ? this.state.filteredIssues[key]
+                    : this.state.issues[key]
+                }
                 deleteIssue={this.deleteIssue}
                 completeIssue={this.completeIssue}
                 updateIssue={this.updateIssue}
