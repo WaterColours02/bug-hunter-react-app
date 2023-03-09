@@ -4,6 +4,8 @@ Welcome to my issue tracker repository.
 This application was built with JavaScript using the REACT framework. 
 The application utilizes firebase to persist and store all user date. 
 
+In order for the application to have access to firebase you will need to input user credetials in the "base.js" component file. Currently, there are firebase credentials present in the base file but the API is not present and hidden in a .env that is referenced in the ".gitignore" file. 
+
 
 *** the sign-in and authentication functionality ***
 I've perposefully kept the sign in process to only use a username so no email or authentication is required. This is only meant to allow people to view the fuctionality of the application without requiring a lengthly sign-in / authentication process.  Keep in mind this is a portfolio project and not meant to be in realworld usehense the lack of security and authentication. 
