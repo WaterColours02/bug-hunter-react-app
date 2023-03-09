@@ -447,13 +447,42 @@ select {
 
 @media only screen and (max-width: 650px) {
   .sign-in {
+    margin: 30vh auto;
     width: 90vw;
   }
 
-  .main {
-    max-width: 90vw;
+  .sign-in-button {
+    padding: 1.2rem;
   }
-  .header {
-    max-width: inherit;
+
+  .main {
+    max-width: 650px;
+  }
+
+  .wrapper {
+    /* margin: 4.2rem auto; */
+  }
+
+  .welcome-user {
+    font-size: 3.2rem;
+  }
+
+  .edit-issue-form,
+  .new-issue-form {
+    /* min-width: 3rem; */
+    max-width: 30rem;
+    max-height: 45rem;
+
+    justify-self: center;
+    align-self: center;
+  }
+
+  .new-issue-submit-button {
+    padding: 1.2rem 12rem;
+  }
+
+  .issue-active {
+    text-align: center;
+    width: 80%;
   }
 }
