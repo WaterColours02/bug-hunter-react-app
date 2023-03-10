@@ -1,6 +1,6 @@
 Welcome to my issue tracker repository. 
 
-** gernal notes **
+** general notes **
 This application was built with JavaScript using the REACT framework. 
 The application utilizes firebase to persist and store all user date. 
 
