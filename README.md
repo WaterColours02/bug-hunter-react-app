@@ -11,8 +11,8 @@ Welcome to the issue tracker repository! This application was built with JavaScr
 In order for the application to have access to Firebase, you will need to input user credentials in the "base.js" component file. Currently, there are Firebase credentials present in the base file but the API is not present and hidden in a .env file that is referenced in the .gitignore file.
 
 
-**
-The Sign-In and Authentication Functionality**
+
+**The Sign-In and Authentication Functionality**
 
 I've purposely kept the sign-in process to only use a username so no email or authentication is required. This is only meant to allow people to view the functionality of the application without requiring a lengthy sign-in/authentication process. Keep in mind that this is a portfolio project and not meant to be used in the real world, hence the lack of security and authentication.
 
